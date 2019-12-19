@@ -45,20 +45,20 @@ def entire_list_random_english_translation():
     correct = 0
     incorrect_list = []
     for item in verbs:
-        randomkey, randomvalue = random.choice(list(verbs.items()))
-        print(randomkey)
+        random_key, random_value = random.choice(list(verbs.items()))
+        print(random_key)
         print('Enter English Translation: ')
-        Answer = input()
-        if Answer == 'restart':
+        answer = input()
+        if answer == 'restart':
             start()
-        if (Answer == randomvalue):
+        if answer == random_value:
             print('CORRECT')
             print("\n")
             correct = correct + 1
         else:
-            incorrect_list.append(randomkey)
+            incorrect_list.append(random_key)
             print('INCORRECT')
-            print('The correct answer is', randomvalue)
+            print('The correct answer is', random_value)
             print("\n")
     print('You got', ((correct / 50) * 100), '% correct')
     print(incorrect_list)
@@ -71,20 +71,20 @@ def entire_list_random_spanish_translation():
     correct = 0
     incorrect_list = []
     for item in verbs:
-        randomkey, randomvalue = random.choice(list(verbs.items()))
-        print(randomvalue)
+        random_key, random_value = random.choice(list(verbs.items()))
+        print(random_value)
         print('Enter Spanish Translation: ')
-        Answer = input()
-        if Answer == 'restart':
+        answer = input()
+        if answer == 'restart':
             start()
-        if (Answer == randomkey):
+        if answer == random_key:
             print('CORRECT')
             print("\n")
             correct = correct + 1
         else:
             incorrect_list.append(item)
             print('INCORRECT')
-            print('The correct answer is', randomkey)
+            print('The correct answer is', random_key)
             print("\n")
     print('You got', ((correct / 50) * 100), '% correct')
 
