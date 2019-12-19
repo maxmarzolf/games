@@ -2,33 +2,32 @@ import random as rand
 import math as math
 
 count = 0
-range = 100
+game_range = 100
 
 
 def random_addition():
     global count
-    global range
-    istrue = bool
-    number1 = rand.randrange(range)
-    number2 = rand.randrange(range)
+    global game_range
+    number1 = rand.randrange(game_range)
+    number2 = rand.randrange(game_range)
     print(number1, '+', number2, '=')
     answer = input()
-    correctanswer = (number1 + number2)
-    if (int(answer) == correctanswer):
-        istrue = True
+    correct_answer = (number1 + number2)
+    if int(answer) == correct_answer:
+        is_true = True
         count += 1
         if count >= 10:
-            range = range * 10
-        call_function(istrue)
+            game_range = game_range * 10
+        call_function(is_true)
     else:
-        istrue = False
-        call_function(istrue)
+        is_true = False
+        call_function(is_true)
 
-    return istrue
+    return is_true
 
 
-def call_function(istrue):
-    if istrue == True:
+def call_function(is_true):
+    if is_true:
         random_addition()
     else:
         print('game over')
