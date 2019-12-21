@@ -35,10 +35,10 @@ def start():
     print('Type Number to Choose Practice Format \n1. English Translation \n2. Spanish Translation')
     choice = input()
     check_key(choice)
-    # if choice == '1':
-    #    entire_list_random_english_translation()
-    # if choice == '2':
-    #    entire_list_random_spanish_translation()
+    if choice == '1':
+       entire_list_random_english_translation()
+    if choice == '2':
+       entire_list_random_spanish_translation()
 
 
 def entire_list_random_english_translation():
@@ -89,7 +89,7 @@ def entire_list_random_spanish_translation():
     print('You got', ((correct / 50) * 100), '% correct')
 
 
-print(incorrect_list)
+    print(incorrect_list)
 
 
 def check_key(english_translation):
