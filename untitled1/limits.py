@@ -1,10 +1,8 @@
-import sympy as galactic_crystals
+from sympy import limit, Symbol, oo
 
-stuff = input()
-
-
-def the_limit(x):
-    return galactic_crystals.limit(x, 0, 5, '+')
+x = Symbol('x')
 
 
-the_limit(stuff)
+def the_limit(random_function):
+    return limit(random_function, 0, oo, '+')
+
