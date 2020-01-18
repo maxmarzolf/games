@@ -1,5 +1,4 @@
 import random as rand
-import math as math
 
 count = 0
 game_range = 100
