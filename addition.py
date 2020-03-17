@@ -1,4 +1,6 @@
 import random as rand
+import datetime
+import math as math
 
 count = 0
 game_range = 100
@@ -30,6 +32,10 @@ def call_function(is_true):
         random_addition()
     else:
         print('game over')
+
+
+def get_time():
+    return datetime.datetime.now()
 
 
 random_addition()
