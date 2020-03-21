@@ -1,13 +1,14 @@
 import random as rand
 import datetime
-import math as math
 
 count = 0
+level = 0
 game_range = 100
 
 
 def random_addition():
     global count
+    global level
     global game_range
     number1 = rand.randrange(game_range)
     number2 = rand.randrange(game_range)
@@ -17,7 +18,7 @@ def random_addition():
     if int(answer) == correct_answer:
         is_true = True
         count += 1
-        if count >= 10:
+        if count % 10 == 0:
             game_range = game_range * 10
         call_function(is_true)
     else:
