@@ -13,7 +13,9 @@ def random_addition():
     number1 = rand.randrange(game_range)
     number2 = rand.randrange(game_range)
     print(number1, '+', number2, '=')
+    start_timer = get_time()
     answer = input()
+    print(get_time() - start_timer)
     correct_answer = (number1 + number2)
     if int(answer) == correct_answer:
         is_true = True
