@@ -27,15 +27,15 @@ def random_addition():
             game_range = game_range * 10
             average_time = sum(lap_time)/len(lap_time)
             print('Your average time was ', average_time, ' seconds')
-        call_function(is_true)
+        start_game(is_true)
     else:
         is_true = False
-        call_function(is_true)
+        start_game(is_true)
 
     return is_true
 
 
-def call_function(is_true):
+def start_game(is_true):
     if is_true:
         random_addition()
     else:
@@ -47,4 +47,3 @@ def get_time():
 
 
 random_addition()
-
