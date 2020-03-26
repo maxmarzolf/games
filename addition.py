@@ -1,4 +1,4 @@
-import random as rand
+import random
 import datetime
 
 count = 0
@@ -12,8 +12,8 @@ def random_addition():
     global level
     global game_range
     global lap_time
-    number1 = rand.randrange(game_range)
-    number2 = rand.randrange(game_range)
+    number1 = random.randrange(game_range)
+    number2 = random.randrange(game_range)
     print(number1, '+', number2, '=')
     start_timer = get_time()
     answer = input()
