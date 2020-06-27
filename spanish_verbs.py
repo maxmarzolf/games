@@ -36,15 +36,15 @@ def start():
     choice = input()
     check_key(choice)
     if choice == '1':
-       entire_list_random_english_translation()
+        entire_list_random_english_translation()
     if choice == '2':
-       entire_list_random_spanish_translation()
+        entire_list_random_spanish_translation()
 
 
 def entire_list_random_english_translation():
     correct = 0
     incorrect_list = []
-    for item in verbs:
+    for _ in verbs:
         random_key, random_value = random.choice(list(verbs.items()))
         print(random_key)
         print('Enter English Translation: ')
@@ -87,7 +87,6 @@ def entire_list_random_spanish_translation():
             print('The correct answer is', random_key)
             print("\n")
     print('You got', ((correct / 50) * 100), '% correct')
-
 
     print(incorrect_list)
 
